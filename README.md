@@ -1,29 +1,31 @@
 # SOC Automation Scripts
 
-A collection of Python-based scripts built for automating common Security Operations Center (SOC) tasks — from log parsing and alert triage to Zabbix uptime reporting and IOC correlation.
+A collection of Python-based scripts to automate repetitive SOC tasks like log parsing and uptime reporting.
 
-## 🔍 What’s Inside
+## 📂 Scripts Included
 
-- `log_parser.py`: Extracts relevant security events from raw syslogs (firewalls, NIDS/HIDS)
-- `ioc_enricher.py`: Looks up IOCs in VirusTotal or AbuseIPDB and enriches alert data
-- `zabbix_uptime_report.py`: Pulls uptime history from Zabbix API and exports to Excel
-- `alert_triage.py`: Filters alerts by severity, source IP, or known attack patterns
-- `auto_es_alert.py`: Sends alerts to Elasticsearch for SIEM correlation
+### 🔸 log_parser.py
+Search and filter syslog/firewall logs for keywords like "failed", "unauthorized", "ssh", etc.
 
-## ⚙️ Technologies
-- Python 3
-- Requests / Pandas / OpenPyXL
-- Elasticsearch / Zabbix API / AbuseIPDB
-- Copilot-assisted code generation
-
-## 🧠 Ideal Use Cases
-- Overloaded SOCs or part-time security teams
-- Automating recurring triage and reporting tasks
-- Building a lightweight SIEM workflow without Splunk costs
-
-## 🚀 Get Started
 ```bash
-git clone https://github.com/yourusername/SOC-Automation-Scripts.git
-cd SOC-Automation-Scripts
-pip install -r requirements.txt
-python log_parser.py --input firewall.log
+python log_parser.py --file auth.log --keyword failed
+```
+
+### 🔸 zabbix_uptime_report.py
+Connects to Zabbix API, extracts icmpping status for hosts in a group, and exports results to Excel.
+
+```bash
+pip install requests pandas openpyxl
+python zabbix_uptime_report.py
+```
+
+## 🔧 Requirements
+
+- Python 3.x
+- requests
+- pandas
+- openpyxl
+
+## ✉️ Contact
+
+If you'd like custom scripts for your logs or SOC tools, contact me at [LinkedIn](https://linkedin.com/in/josephkibaki) or [Fiverr](https://fiverr.com).
