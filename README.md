@@ -29,3 +29,6 @@ python zabbix_uptime_report.py
 ## ✉️ Contact
 
 If you'd like custom scripts for your logs or SOC tools, contact me at [LinkedIn](https://linkedin.com/in/josephkibaki) or [Fiverr](https://fiverr.com).
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Maintained](https://img.shields.io/badge/status-maintained-brightgreen)
